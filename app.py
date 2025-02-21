@@ -1,5 +1,13 @@
+from faker_ka.core.faker import Faker
+from faker_ka.core.constants import Constants
+from faker_ka.core.db import Database
+
+
 def main():
-    print("Hello from faker-ka!")
+    db = Database()
+    db.create_tables()  # Ensure tables are created
+    print("✅ Database tables created successfully!")
+    faker = Faker()
 
 
 if __name__ == "__main__":
